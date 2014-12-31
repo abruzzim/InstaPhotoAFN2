@@ -58,7 +58,7 @@
     // Boolean value indicating that this receiver is not editable.
     bioText.editable = NO;
     // Add text.
-    bioText.text = @"Bio: Mario Abruzzi is coding along with Gregg Pollack, the founder of Envy Labs and teacher of multiple courses at Code School. Code School teaches web programming in the comfort of my browser with video lessons, coding chalenges and screencasts.";
+    bioText.text = @"Bio: Mario Abruzzi is coding along with Gregg Pollack, the founder of Envy Labs and teacher of multiple courses at Code School. Code School teaches web programming in the comfort of my browser with video lessons, coding chalenges and screencasts. Currently he is re-doing this whole course to clean up his directories and version control.";
     [self.view addSubview:bioText];
 
     /* Add Membership */
