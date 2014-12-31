@@ -22,10 +22,12 @@
     UIViewController *feedViewController         = [[UIViewController alloc] init];
     feedViewController.title                     = @"Feed";
     feedViewController.view.backgroundColor      = [UIColor blueColor];
+    feedViewController.tabBarItem.image          = [UIImage imageNamed:@"Feed"];
     //
     UIViewController *favoritesViewController    = [[UIViewController alloc] init];
     favoritesViewController.title                = @"Favorites";
     favoritesViewController.view.backgroundColor = [UIColor orangeColor];
+    favoritesViewController.tabBarItem.image     = [UIImage imageNamed:@"Favorites"];
     /*
      Instantiate a Tab Bar Controller.
      */
