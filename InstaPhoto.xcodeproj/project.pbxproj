@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF58A4A31A53988800ED79E6 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58A4A21A53988800ED79E6 /* FeedViewController.m */; };
+		AF58A4A61A539D3200ED79E6 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58A4A51A539D3200ED79E6 /* FavoritesViewController.m */; };
+		AF58A4A91A53A03200ED79E6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58A4A81A53A03200ED79E6 /* ProfileViewController.m */; };
 		AF6133031A5309BA0081CABC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6133021A5309BA0081CABC /* main.m */; };
 		AF6133061A5309BA0081CABC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6133051A5309BA0081CABC /* AppDelegate.m */; };
 		AF6133091A5309BA0081CABC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6133081A5309BA0081CABC /* ViewController.m */; };
@@ -27,6 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF58A4A11A53988800ED79E6 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		AF58A4A21A53988800ED79E6 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		AF58A4A41A539D3200ED79E6 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		AF58A4A51A539D3200ED79E6 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		AF58A4A71A53A03200ED79E6 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		AF58A4A81A53A03200ED79E6 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		AF6132FD1A5309BA0081CABC /* InstaPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6133011A5309BA0081CABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6133021A5309BA0081CABC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,6 +92,12 @@
 			children = (
 				AF6133041A5309BA0081CABC /* AppDelegate.h */,
 				AF6133051A5309BA0081CABC /* AppDelegate.m */,
+				AF58A4A71A53A03200ED79E6 /* ProfileViewController.h */,
+				AF58A4A81A53A03200ED79E6 /* ProfileViewController.m */,
+				AF58A4A41A539D3200ED79E6 /* FavoritesViewController.h */,
+				AF58A4A51A539D3200ED79E6 /* FavoritesViewController.m */,
+				AF58A4A11A53988800ED79E6 /* FeedViewController.h */,
+				AF58A4A21A53988800ED79E6 /* FeedViewController.m */,
 				AF6133071A5309BA0081CABC /* ViewController.h */,
 				AF6133081A5309BA0081CABC /* ViewController.m */,
 				AF61330A1A5309BA0081CABC /* Main.storyboard */,
@@ -219,8 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF58A4A61A539D3200ED79E6 /* FavoritesViewController.m in Sources */,
 				AF6133091A5309BA0081CABC /* ViewController.m in Sources */,
 				AF6133061A5309BA0081CABC /* AppDelegate.m in Sources */,
+				AF58A4A31A53988800ED79E6 /* FeedViewController.m in Sources */,
+				AF58A4A91A53A03200ED79E6 /* ProfileViewController.m in Sources */,
 				AF6133031A5309BA0081CABC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +430,7 @@
 				AF6133221A5309BA0081CABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF6133231A5309BA0081CABC /* Build configuration list for PBXNativeTarget "InstaPhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +439,7 @@
 				AF6133251A5309BA0081CABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

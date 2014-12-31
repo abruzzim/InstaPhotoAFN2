@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedViewController.h"
+#import "FavoritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,15 +22,18 @@
     /*
      Instantiate UIViewControllers.
      */
-    UIViewController *feedViewController         = [[UIViewController alloc] init];
-    feedViewController.title                     = @"Feed";
-    feedViewController.view.backgroundColor      = [UIColor blueColor];
-    feedViewController.tabBarItem.image          = [UIImage imageNamed:@"Feed"];
+    FeedViewController *feedViewController           = [[FeedViewController alloc] init];
+    // TODO - Move VC attributes to the custom VC.
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+    favoritesViewController.title                    = @"Favorites";
+    favoritesViewController.tabBarItem.image         = [UIImage imageNamed:@"Favorites"];
+    //favoritesViewController.view.backgroundColor = [UIColor orangeColor];
     //
-    UIViewController *favoritesViewController    = [[UIViewController alloc] init];
-    favoritesViewController.title                = @"Favorites";
-    favoritesViewController.view.backgroundColor = [UIColor orangeColor];
-    favoritesViewController.tabBarItem.image     = [UIImage imageNamed:@"Favorites"];
+    // TODO - Move VC attributes to the custom VC.
+    ProfileViewController *profileViewController     = [[ProfileViewController alloc] init];
+    profileViewController.title                      = @"Profile";
+    profileViewController.tabBarItem.image           = [UIImage imageNamed:@"Profile"];
+    //profileViewController.view.backgroundColor   = [UIColor yellowColor];
     /*
      Instantiate a Tab Bar Controller.
      */
@@ -35,7 +41,7 @@
     /*
      Set the array of root view controllers.
      */
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
     /*
      Instantiate a UIWindow to manage and coordinate the app's views
      that is set to the bounds of the physical device's main screen.
