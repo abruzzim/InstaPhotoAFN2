@@ -23,17 +23,19 @@
      Instantiate UIViewControllers.
      */
     FeedViewController *feedViewController           = [[FeedViewController alloc] init];
+    
     // TODO - Move VC attributes to the custom VC.
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     favoritesViewController.title                    = @"Favorites";
     favoritesViewController.tabBarItem.image         = [UIImage imageNamed:@"Favorites"];
     //favoritesViewController.view.backgroundColor = [UIColor orangeColor];
-    //
+
     // TODO - Move VC attributes to the custom VC.
     ProfileViewController *profileViewController     = [[ProfileViewController alloc] init];
     profileViewController.title                      = @"Profile";
     profileViewController.tabBarItem.image           = [UIImage imageNamed:@"Profile"];
     //profileViewController.view.backgroundColor   = [UIColor yellowColor];
+    
     /*
      Instantiate a Tab Bar Controller.
      */
@@ -42,6 +44,7 @@
      Set the array of root view controllers.
      */
     [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
+    
     /*
      Instantiate a UIWindow to manage and coordinate the app's views
      that is set to the bounds of the physical device's main screen.
