@@ -16,7 +16,38 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /*
+     Instantiate UIViewControllers.
+     */
+    UIViewController *feedViewController         = [[UIViewController alloc] init];
+    feedViewController.title                     = @"Feed";
+    feedViewController.view.backgroundColor      = [UIColor blueColor];
+    //
+    UIViewController *favoritesViewController    = [[UIViewController alloc] init];
+    favoritesViewController.title                = @"Favorites";
+    favoritesViewController.view.backgroundColor = [UIColor orangeColor];
+    /*
+     Instantiate a Tab Bar Controller.
+     */
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    /*
+     Set the array of root view controllers.
+     */
+    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    /*
+     Instantiate a UIWindow to manage and coordinate the app's views
+     that is set to the bounds of the physical device's main screen.
+     */
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    /*
+     Installs the view controller’s view as the content view of the window.
+     */
+    self.window.rootViewController = tabBarController;
+    /*
+     Make the receiver the main window and display it in front of other windows at the same window level.
+     */
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
