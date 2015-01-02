@@ -31,7 +31,7 @@
     
     // Set the integer bit mask that determines how the receiver resizes
     // itself when its superview's bounds change.
-    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.scrollView.autoresizingMask = (UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
     
     // Set the size of the content view.
     // The scroll view height is "y" + "height of last view" + "padding"
