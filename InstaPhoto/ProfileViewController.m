@@ -23,6 +23,21 @@
     //self.tabBarItem.image     = [UIImage imageNamed:@"Profile"];
     self.view.backgroundColor = [UIColor yellowColor];
     
+    /* Setup Scroll View */
+
+    // Scroll View - class supports displaying content that is
+    // larger than the size of the application's window.
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    
+    // Set the integer bit mask that determines how the receiver resizes
+    // itself when its superview's bounds change.
+    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    
+    // Set the size of the content view.
+    // The scroll view height is "y" + "height of last view" + "padding"
+    // In this case: 700 + 40 + 100 = 840
+    self.scrollView.contentSize = CGSizeMake(320, 840);
+    
     /* Add Picture */
     
     // Create an image view object to display an image.
@@ -33,7 +48,7 @@
     myView.frame = CGRectMake(25, 30, 100, 160);
     
     // Add the picture as a subview.
-    [self.view addSubview:myView];
+    [self.scrollView addSubview:myView];
     
     /* Add Name */
     
@@ -42,13 +57,13 @@
     // Set the text property.
     nameLbl.text = @"Name: Mario Abruzzi";
     // Add the label as a subview.
-    [self.view addSubview:nameLbl];
+    [self.scrollView addSubview:nameLbl];
     
     /* Add City */
 
     UILabel *cityLbl = [[UILabel alloc] initWithFrame:CGRectMake(30, 240, 280, 40)];
     cityLbl.text = @"From: New York";
-    [self.view addSubview:cityLbl];
+    [self.scrollView addSubview:cityLbl];
     
     /* Add Biography */
 
@@ -59,13 +74,18 @@
     bioText.editable = NO;
     // Add text.
     bioText.text = @"Bio: Mario Abruzzi is coding along with Gregg Pollack, the founder of Envy Labs and teacher of multiple courses at Code School. Code School teaches web programming in the comfort of my browser with video lessons, coding chalenges and screencasts. Currently he is re-doing this whole course to clean up his directories and version control.";
-    [self.view addSubview:bioText];
+    [self.scrollView addSubview:bioText];
 
     /* Add Membership */
     
     UILabel *memberSinceLbl = [[UILabel alloc] initWithFrame:CGRectMake(30, 700, 280, 40)];
     memberSinceLbl.text = @"Member Since: 1997";
-    [self.view addSubview:memberSinceLbl];
+    [self.scrollView addSubview:memberSinceLbl];
+    
+    /* Setup Scroll View */
+    
+    // Add the scrollView to the view controller's view.
+    [self.view addSubview:self.scrollView];
     
 }
 

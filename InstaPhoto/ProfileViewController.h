@@ -10,4 +10,7 @@
 
 @interface ProfileViewController : UIViewController
 
+// Add scroll view capability.
+@property (strong, nonatomic) UIScrollView *scrollView;
+
 @end
