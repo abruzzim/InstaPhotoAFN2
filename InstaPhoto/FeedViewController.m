@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(@"%%FeedViewController-I-DEBUG, Property definitions.");
     self.title                = @"Feed";
     self.view.backgroundColor = [UIColor blueColor];
     self.tabBarItem.image     = [UIImage imageNamed:@"Feed"];

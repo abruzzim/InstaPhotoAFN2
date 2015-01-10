@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /*
-     Instantiate UIViewControllers.
+     Instantiate UIViewControllers (custom view controllers)
      */
     FeedViewController *feedViewController           = [[FeedViewController alloc] init];
     
@@ -28,32 +28,44 @@
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     favoritesViewController.title                    = @"Favorites";
     favoritesViewController.tabBarItem.image         = [UIImage imageNamed:@"Favorites"];
-    //favoritesViewController.view.backgroundColor = [UIColor orangeColor];
+    ////favoritesViewController.view.backgroundColor = [UIColor orangeColor];
 
     // TODO - Move VC attributes to the custom VC.
     ProfileViewController *profileViewController     = [[ProfileViewController alloc] init];
     profileViewController.title                      = @"Profile";
     profileViewController.tabBarItem.image           = [UIImage imageNamed:@"Profile"];
-    //profileViewController.view.backgroundColor   = [UIColor yellowColor];
+    ////profileViewController.view.backgroundColor   = [UIColor yellowColor];
     
+    /*
+     Instantiate Navigation View Controllers.
+     */
+    UINavigationController *feedNavController      = [[UINavigationController alloc] initWithRootViewController:feedViewController];
+    UINavigationController *favoritesNavController = [[UINavigationController alloc] initWithRootViewController:favoritesViewController];
+    UINavigationController *profileNavController   = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+
     /*
      Instantiate a Tab Bar Controller.
      */
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
     /*
-     Set the array of root view controllers.
+     Add Nav View Controllers to the Tab Bar Controller.
+     Additionally, animate tab bar items for the view controllers into position.
      */
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
+    [tabBarController setViewControllers:@[feedNavController, favoritesNavController, profileNavController]
+                                animated:YES];
     
     /*
      Instantiate a UIWindow to manage and coordinate the app's views
      that is set to the bounds of the physical device's main screen.
      */
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     /*
      Installs the view controller’s view as the content view of the window.
      */
     self.window.rootViewController = tabBarController;
+    
     /*
      Make the receiver the main window and display it in front of other windows at the same window level.
      */
