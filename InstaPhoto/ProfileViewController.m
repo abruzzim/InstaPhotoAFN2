@@ -19,9 +19,8 @@
     [super viewDidLoad];
     
     // Custom view controller behavior.
-    //self.title                = @"Profile";
-    //self.tabBarItem.image     = [UIImage imageNamed:@"Profile"];
     self.view.backgroundColor = [UIColor yellowColor];
+    NSLog(@"%%ProfileViewController-I-DEBUG, 'backgroundColor' property set.");
     
     /* Setup Scroll View */
 
@@ -45,7 +44,7 @@
     
     // Set the frame, which descibes the view's location and size
     // in its superview's coordinate system.
-    myView.frame = CGRectMake(25, 30, 100, 160);
+    myView.frame = CGRectMake(30, 30, 100, 100);
     
     // Add the picture as a subview.
     [self.scrollView addSubview:myView];
@@ -53,7 +52,7 @@
     /* Add Name */
     
     // Initialize and return a newly allocated view object with the specified frame rectangle.
-    UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(30, 200, 280, 40)];
+    UILabel *nameLbl = [[UILabel alloc] initWithFrame:CGRectMake(30, 150, 280, 40)];
     // Set the text property.
     nameLbl.text = @"Name: Mario Abruzzi";
     // Add the label as a subview.
@@ -61,7 +60,7 @@
     
     /* Add City */
 
-    UILabel *cityLbl = [[UILabel alloc] initWithFrame:CGRectMake(30, 240, 280, 40)];
+    UILabel *cityLbl = [[UILabel alloc] initWithFrame:CGRectMake(30, 190, 280, 40)];
     cityLbl.text = @"From: New York";
     [self.scrollView addSubview:cityLbl];
     

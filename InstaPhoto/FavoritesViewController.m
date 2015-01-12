@@ -17,9 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //self.title                = @"Favorites";
-    //self.tabBarItem.image     = [UIImage imageNamed:@"Favorites"];
     self.view.backgroundColor = [UIColor orangeColor];
+    NSLog(@"%%FavoritesViewController-I-DEBUG, 'backgroundColor' property set.");
 }
 
 - (void)didReceiveMemoryWarning {
