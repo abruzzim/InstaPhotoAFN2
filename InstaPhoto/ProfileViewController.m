@@ -14,6 +14,17 @@
 
 @implementation ProfileViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = @"Profile";
+        NSLog(@"%%ProfileViewController-I-DEBUG, 'title' property set.");
+        self.tabBarItem.image = [UIImage imageNamed:@"Profile"];
+        NSLog(@"%%ProfileViewController-I-DEBUG, 'tabBarItem.image' property set.");
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];

@@ -22,23 +22,9 @@
     /*
      Instantiate UIViewControllers (custom view controllers)
      */
-    FeedViewController *feedViewController           = [[FeedViewController alloc] init];
-    feedViewController.tabBarItem.image              = [UIImage imageNamed:@"Feed"];
-    NSLog(@"%%AppDelegate-I-DEBUG, 'feedViewController.tabBarItem.image' property set.");
-    
-    // TODO - Move VC attributes to the custom VC.
+    FeedViewController      *feedViewController      = [[FeedViewController alloc] init];
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
-    favoritesViewController.title                    = @"Favorites";
-    NSLog(@"%%AppDelegate-I-DEBUG, 'favoritesViewController.title' property set.");
-    favoritesViewController.tabBarItem.image         = [UIImage imageNamed:@"Favorites"];
-    NSLog(@"%%AppDelegate-I-DEBUG, 'favoritesViewController.tabBarItem.image' property set.");
-
-    // TODO - Move VC attributes to the custom VC.
-    ProfileViewController *profileViewController     = [[ProfileViewController alloc] init];
-    profileViewController.title                      = @"Profile";
-    NSLog(@"%%AppDelegate-I-DEBUG, 'profileViewController.title' property set.");
-    profileViewController.tabBarItem.image           = [UIImage imageNamed:@"Profile"];
-    NSLog(@"%%AppDelegate-I-DEBUG, 'profileViewController.tabBarItem.image' property set.");
+    ProfileViewController   *profileViewController   = [[ProfileViewController alloc] init];
     
     /*
      Instantiate Navigation View Controllers.

@@ -14,11 +14,21 @@
 
 @implementation FeedViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization.
+        self.title = @"Feed";
+        NSLog(@"%%FeedViewController-I-DEBUG, 'title' property set.");
+        self.tabBarItem.image = [UIImage imageNamed:@"Feed"];
+        NSLog(@"%%FeedViewController-I-DEBUG, 'tabBarItem.image' property set.");
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title                = @"Feed";
-    NSLog(@"%%FeedViewController-I-DEBUG, 'title' property set.");
     self.view.backgroundColor = [UIColor blueColor];
     NSLog(@"%%FeedViewController-I-DEBUG, 'backgroundColor' property set.");
     

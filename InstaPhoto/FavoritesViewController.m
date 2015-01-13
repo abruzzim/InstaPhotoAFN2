@@ -14,6 +14,18 @@
 
 @implementation FavoritesViewController
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization.
+        self.title = @"Favorites";
+        NSLog(@"%%FavoritesViewController-I-DEBUG, 'title' property set.");
+        self.tabBarItem.image = [UIImage imageNamed:@"Favorites"];
+        NSLog(@"%%FavoritesViewController-I-DEBUG, 'tabBarItem.image' property set.");
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
