@@ -7,6 +7,7 @@
 //
 
 #import "FavoritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface FavoritesViewController ()
 
@@ -32,7 +33,7 @@
     self.view.backgroundColor = [UIColor orangeColor];
     NSLog(@"%%FavoritesViewController-I-DEBUG, 'backgroundColor' property set.");
     
-    /* Setup Logo Subview */
+    /* Create Favorites Logo Image Object */
     
     // Create an image view object to display an image.
     UIImageView *myLogo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.jpg"]];
@@ -51,6 +52,24 @@
     // Add the logo image view as a subview.
     [self.view addSubview:myLogo];
     NSLog(@"%%FavoritesViewController-I-DEBUG, Subview added.");
+    
+    /* Create View Profile Button Object */
+    
+    UIButton *profileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    profileButton.layer.cornerRadius = 5;
+    profileButton.frame = CGRectMake((375/2)-(200/2), 200, 200, 44);
+    profileButton.backgroundColor = [UIColor whiteColor];
+    [profileButton setTitle:@"View Profile" forState:UIControlStateNormal];
+    [self.view addSubview:profileButton];
+    [profileButton addTarget:self
+                      action:@selector(viewProfile:)
+            forControlEvents:UIControlEventTouchUpInside];
+    NSLog(@"%%FavoritesViewController-I-DEBUG, View Profile Button Object added.");
+}
+
+- (void)viewProfile:(UIButton *)sender {
+    ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
+    [self.navigationController pushViewController:profileViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
