@@ -87,16 +87,16 @@
 
 - (void)viewZoomedPicture:(UIButton *)sender {
     
-    UIViewController *pictureImageVC = [[UIViewController alloc] init];                    // Create the new view controller on-the-fly.
-    pictureImageVC.view.frame = self.view.frame;                                           // Set the frame to the entire view frame.
-    pictureImageVC.title = @"Yosemite";                                                    // Set the view controller title.
-    UIImageView *yosemiteView = [[UIImageView alloc]
+    UIViewController *imageVC = [[UIViewController alloc] init];                           // Create the new view controller on-the-fly.
+    imageVC.view.frame = self.view.frame;                                                  // Set the frame to the entire view frame.
+    imageVC.title = @"Yosemite";                                                           // Set the view controller title.
+    UIImageView *yosemiteImage = [[UIImageView alloc]
                                  initWithImage:[UIImage imageNamed:@"Yosemite_USA.jpg"]];  // Create an image.
-    [yosemiteView setContentMode:UIViewContentModeScaleAspectFill];                        // Scale the content to fill the view.
-    yosemiteView.frame = pictureImageVC.view.frame;
-    [pictureImageVC.view addSubview:yosemiteView];                                         // Add the image as a subview.
-    [self.navigationController pushViewController:pictureImageVC
-                                         animated:YES];                                    // Push new view controller on to the navigation controller's stack.
+    [yosemiteImage setContentMode:UIViewContentModeScaleAspectFill];                       // Scale the content to fill the view.
+    yosemiteImage.frame = imageVC.view.frame;
+    [imageVC.view addSubview:yosemiteImage];                                               // Add the image as a subview.
+    [self.navigationController pushViewController:imageVC
+                                         animated:YES];                                    // Push new view controller onto the navigation controller's stack.
     
 }
 
