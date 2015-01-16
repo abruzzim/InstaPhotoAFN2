@@ -57,7 +57,7 @@
     
     UIButton *profileButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     profileButton.layer.cornerRadius = 5;
-    profileButton.frame = CGRectMake((375/2)-(200/2), 200, 200, 44);
+    profileButton.frame = CGRectMake((375/2)-(200/2), 100, 200, 44);
     profileButton.backgroundColor = [UIColor whiteColor];
     [profileButton setTitle:@"View Profile" forState:UIControlStateNormal];
     [self.view addSubview:profileButton];
@@ -65,11 +65,39 @@
                       action:@selector(viewProfile:)
             forControlEvents:UIControlEventTouchUpInside];
     NSLog(@"%%FavoritesViewController-I-DEBUG, View Profile Button Object added.");
+    
+    /* Create Zoom Picture Button Object */
+    
+    UIButton *pictureButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [pictureButton setImage:[UIImage imageNamed:@"Yosemite_USA_icon.jpg"] forState:UIControlStateNormal];
+    [pictureButton setImage:[UIImage imageNamed:@"Yosemite_USA_icon2.jpg"] forState:UIControlStateHighlighted];
+    [pictureButton setFrame:CGRectMake((375/2)-(200/2), 200, 200, 44)];
+    pictureButton.layer.cornerRadius = 5;
+    [self.view addSubview:pictureButton];
+    [pictureButton addTarget:self
+                      action:@selector(viewZoomedPicture:)
+            forControlEvents:UIControlEventTouchUpInside];
+    NSLog(@"%%FavoritesViewController-I-DEBUG, View Picture Button Object added.");
 }
 
 - (void)viewProfile:(UIButton *)sender {
     ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
     [self.navigationController pushViewController:profileViewController animated:YES];
+}
+
+- (void)viewZoomedPicture:(UIButton *)sender {
+    
+    UIViewController *pictureImageVC = [[UIViewController alloc] init];                    // Create the new view controller on-the-fly.
+    pictureImageVC.view.frame = self.view.frame;                                           // Set the frame to the entire view frame.
+    pictureImageVC.title = @"Yosemite";                                                    // Set the view controller title.
+    UIImageView *yosemiteView = [[UIImageView alloc]
+                                 initWithImage:[UIImage imageNamed:@"Yosemite_USA.jpg"]];  // Create an image.
+    [yosemiteView setContentMode:UIViewContentModeScaleAspectFill];                        // Scale the content to fill the view.
+    yosemiteView.frame = pictureImageVC.view.frame;
+    [pictureImageVC.view addSubview:yosemiteView];                                         // Add the image as a subview.
+    [self.navigationController pushViewController:pictureImageVC
+                                         animated:YES];                                    // Push new view controller on to the navigation controller's stack.
+    
 }
 
 - (void)didReceiveMemoryWarning {
