@@ -17,6 +17,7 @@
 		AF61330E1A5309BA0081CABC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF61330D1A5309BA0081CABC /* Images.xcassets */; };
 		AF6133111A5309BA0081CABC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF61330F1A5309BA0081CABC /* LaunchScreen.xib */; };
 		AF61331D1A5309BA0081CABC /* InstaPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61331C1A5309BA0081CABC /* InstaPhotoTests.m */; };
+		AFEFA1CA1A6C237E0012785B /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFA1C91A6C237E0012785B /* FeedTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		AF6133161A5309BA0081CABC /* InstaPhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaPhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF61331B1A5309BA0081CABC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF61331C1A5309BA0081CABC /* InstaPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaPhotoTests.m; sourceTree = "<group>"; };
+		AFEFA1C81A6C237E0012785B /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
+		AFEFA1C91A6C237E0012785B /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 				AF58A4A81A53A03200ED79E6 /* ProfileViewController.m */,
 				AF58A4A41A539D3200ED79E6 /* FavoritesViewController.h */,
 				AF58A4A51A539D3200ED79E6 /* FavoritesViewController.m */,
+				AFEFA1C81A6C237E0012785B /* FeedTableViewController.h */,
+				AFEFA1C91A6C237E0012785B /* FeedTableViewController.m */,
 				AF58A4A11A53988800ED79E6 /* FeedViewController.h */,
 				AF58A4A21A53988800ED79E6 /* FeedViewController.m */,
 				AF6133071A5309BA0081CABC /* ViewController.h */,
@@ -237,6 +242,7 @@
 				AF58A4A61A539D3200ED79E6 /* FavoritesViewController.m in Sources */,
 				AF6133091A5309BA0081CABC /* ViewController.m in Sources */,
 				AF6133061A5309BA0081CABC /* AppDelegate.m in Sources */,
+				AFEFA1CA1A6C237E0012785B /* FeedTableViewController.m in Sources */,
 				AF58A4A31A53988800ED79E6 /* FeedViewController.m in Sources */,
 				AF58A4A91A53A03200ED79E6 /* ProfileViewController.m in Sources */,
 				AF6133031A5309BA0081CABC /* main.m in Sources */,

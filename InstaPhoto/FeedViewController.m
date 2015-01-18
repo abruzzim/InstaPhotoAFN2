@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Mario Abruzzi. All rights reserved.
 //
 
+/*
+ FeedViewController superceded by FeedTableViewController
+ */
+
 #import "FeedViewController.h"
 
 @interface FeedViewController ()
@@ -14,9 +18,13 @@
 
 @implementation FeedViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+- (id)initWithNibName:(NSString *)nibNameOrNil
+               bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
+    if (self)
+    {
         // Custom initialization.
         self.title = @"Feed";
         NSLog(@"%%FeedViewController-I-DEBUG, 'title' property set.");
