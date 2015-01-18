@@ -26,6 +26,8 @@
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'title' property set.");
         self.tabBarItem.image = [UIImage imageNamed:@"Feed"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'tabBarItem.image' property set.");
+        self.imageTitleArray = @[@"Image 1",@"Image 2",@"Image 3",@"Image 4",@"Image 5"];
+        NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageTitleArray' property set.");
     }
     return self;
 }
@@ -48,7 +50,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'numberOfSectionsInTableView'.");
+    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'numberOfSectionsInTableView:'.");
     return 1;
 }
 
@@ -56,8 +58,8 @@
  numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:numberOfRowsInSection'.");
-    return 20;
+    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:numberOfRowsInSection:'.");
+    return [self.imageTitleArray count];
 }
 
 /*
@@ -66,7 +68,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:cellForRowAtIndexPath'.");
+    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:cellForRowAtIndexPath:'.");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"];
     
     // If there is no reusable cell with identifier @"Title" then allocate a new one.
@@ -76,7 +78,8 @@
                                       reuseIdentifier:@"Title"];
     }
     
-    cell.textLabel.text = @"Cell Text Label";
+    // Set the cell label to the text in the array.
+    cell.textLabel.text = self.imageTitleArray[indexPath.row];
     
     // Initialize and setup each cell in the table view.
     return cell;
