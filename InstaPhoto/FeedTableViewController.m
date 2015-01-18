@@ -28,6 +28,8 @@
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'tabBarItem.image' property set.");
         self.imageTitleArray = @[@"Image 1",@"Image 2",@"Image 3",@"Image 4",@"Image 5"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageTitleArray' property set.");
+        self.imageFileNameArray = @[@"image1.png",@"image2.png",@"image3.png",@"image4.png",@"image5.png"];
+        NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageFileNameArray' property set.");
     }
     return self;
 }
@@ -86,12 +88,13 @@
 }
 
 /*
- Log the indexPath Row to the Console.
+ Log the indexPath Row and Filename to the Console.
  */
 - (void)       tableView:(UITableView *)tableView
  didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:didSelectRowAtIndexPath' %ld.", indexPath.row);
+    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:didSelectRowAtIndexPath' filename %@.", self.imageFileNameArray[indexPath.row]);
 }
 
 /*
