@@ -18,6 +18,7 @@
 		AF6133111A5309BA0081CABC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF61330F1A5309BA0081CABC /* LaunchScreen.xib */; };
 		AF61331D1A5309BA0081CABC /* InstaPhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF61331C1A5309BA0081CABC /* InstaPhotoTests.m */; };
 		AFEFA1CA1A6C237E0012785B /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFA1C91A6C237E0012785B /* FeedTableViewController.m */; };
+		AFEFA1CD1A6C6DBB0012785B /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEFA1CC1A6C6DBB0012785B /* PhotoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		AF61331C1A5309BA0081CABC /* InstaPhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaPhotoTests.m; sourceTree = "<group>"; };
 		AFEFA1C81A6C237E0012785B /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		AFEFA1C91A6C237E0012785B /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		AFEFA1CB1A6C6DBB0012785B /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		AFEFA1CC1A6C6DBB0012785B /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				AF58A4A51A539D3200ED79E6 /* FavoritesViewController.m */,
 				AFEFA1C81A6C237E0012785B /* FeedTableViewController.h */,
 				AFEFA1C91A6C237E0012785B /* FeedTableViewController.m */,
+				AFEFA1CB1A6C6DBB0012785B /* PhotoViewController.h */,
+				AFEFA1CC1A6C6DBB0012785B /* PhotoViewController.m */,
 				AF58A4A11A53988800ED79E6 /* FeedViewController.h */,
 				AF58A4A21A53988800ED79E6 /* FeedViewController.m */,
 				AF6133071A5309BA0081CABC /* ViewController.h */,
@@ -240,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF58A4A61A539D3200ED79E6 /* FavoritesViewController.m in Sources */,
+				AFEFA1CD1A6C6DBB0012785B /* PhotoViewController.m in Sources */,
 				AF6133091A5309BA0081CABC /* ViewController.m in Sources */,
 				AF6133061A5309BA0081CABC /* AppDelegate.m in Sources */,
 				AFEFA1CA1A6C237E0012785B /* FeedTableViewController.m in Sources */,

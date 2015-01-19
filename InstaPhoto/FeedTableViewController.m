@@ -7,6 +7,7 @@
 //
 
 #import "FeedTableViewController.h"
+#import "PhotoViewController.h"
 
 @interface FeedTableViewController ()
 
@@ -26,9 +27,9 @@
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'title' property set.");
         self.tabBarItem.image = [UIImage imageNamed:@"Feed"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'tabBarItem.image' property set.");
-        self.imageTitleArray = @[@"Image 1",@"Image 2",@"Image 3",@"Image 4",@"Image 5"];
+        self.imageTitleArray = @[@"Bear",@"Dog",@"Duck",@"Horse",@"Peacock"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageTitleArray' property set.");
-        self.imageFileNameArray = @[@"image1.png",@"image2.png",@"image3.png",@"image4.png",@"image5.png"];
+        self.imageFileNameArray = @[@"bear.jpg",@"dog.jpg",@"duck.jpg",@"horse.jpg",@"peacock.jpg"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageFileNameArray' property set.");
     }
     return self;
@@ -61,7 +62,7 @@
 {
     // Return the number of rows in the section.
     NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:numberOfRowsInSection:'.");
-    return [self.imageTitleArray count];
+    return self.imageTitleArray.count;
 }
 
 /*
@@ -70,20 +71,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Initialize and setup each cell in the table view.
+
     NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:cellForRowAtIndexPath:'.");
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellID"];
     
-    // If there is no reusable cell with identifier @"Title" then allocate a new one.
+    // If there is no reusable cell with identifier @"CellID" then allocate a new one.
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:@"Title"];
+                                      reuseIdentifier:@"CellID"];
     }
     
     // Set the cell label to the text in the array.
     cell.textLabel.text = self.imageTitleArray[indexPath.row];
     
-    // Initialize and setup each cell in the table view.
     return cell;
 }
 
@@ -94,7 +96,11 @@
  didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:didSelectRowAtIndexPath' %ld.", indexPath.row);
-    NSLog(@"%%FeedTableViewController-I-DEBUG, Instance method 'tableView:didSelectRowAtIndexPath' filename %@.", self.imageFileNameArray[indexPath.row]);
+    
+    PhotoViewController *photoVC = [[PhotoViewController alloc] init];   // Instantiate photo VC.
+    photoVC.imageTitle    = self.imageTitleArray[indexPath.row];         // Set image title.
+    photoVC.imageFileName = self.imageFileNameArray[indexPath.row];      // Set image file name.
+    [self.navigationController pushViewController:photoVC animated:YES]; // Push photoVC onto Nav Controller array stack.
 }
 
 /*
