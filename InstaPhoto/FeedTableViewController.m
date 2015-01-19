@@ -33,6 +33,8 @@
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageFileNameArray' property set.");
         self.imageDetailArray = @[@"A Bear",@"A Dog",@"A Duck",@"A Horse",@"A Peacock"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageDetailArray' property set.");
+        self.imageThumbnailArray = @[@"bearicon.jpg",@"dogicon.jpg",@"duckicon.jpg",@"horseicon.jpg",@"peacockicon.jpg"];
+        NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageThumbnailArray' property set.");
     }
     return self;
 }
@@ -85,11 +87,13 @@
                                       reuseIdentifier:@"CellID"];
     }
     
-    // Set the cell label text.
-    cell.textLabel.text = self.imageTitleArray[indexPath.row];
-    
-    // Set the cell detail text label.
+    /* 
+     Set the main text label, secondary text label and the
+     thumbnail image of the predefined UITableViewCell instance.
+     */
+    cell.textLabel.text       = self.imageTitleArray[indexPath.row];
     cell.detailTextLabel.text = self.imageDetailArray[indexPath.row];
+    cell.imageView.image      = [UIImage imageNamed:self.imageThumbnailArray[indexPath.row]];
     
     return cell;
 }
