@@ -31,6 +31,8 @@
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageTitleArray' property set.");
         self.imageFileNameArray = @[@"bear.jpg",@"dog.jpg",@"duck.jpg",@"horse.jpg",@"peacock.jpg"];
         NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageFileNameArray' property set.");
+        self.imageDetailArray = @[@"A Bear",@"A Dog",@"A Duck",@"A Horse",@"A Peacock"];
+        NSLog(@"%%FeedTableViewController-I-DEBUG, 'imageDetailArray' property set.");
     }
     return self;
 }
@@ -79,12 +81,15 @@
     // If there is no reusable cell with identifier @"CellID" then allocate a new one.
     if (cell == nil)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"CellID"];
     }
     
-    // Set the cell label to the text in the array.
+    // Set the cell label text.
     cell.textLabel.text = self.imageTitleArray[indexPath.row];
+    
+    // Set the cell detail text label.
+    cell.detailTextLabel.text = self.imageDetailArray[indexPath.row];
     
     return cell;
 }
