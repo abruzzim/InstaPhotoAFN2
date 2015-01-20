@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface ProfileViewController ()
 
@@ -48,14 +49,18 @@
     // In this case: 700 + 40 + 100 = 840
     self.scrollView.contentSize = CGSizeMake(320, 840);
     
-    /* Add Picture */
+    /* Add Picture from the Internet */
     
     // Create an image view object to display an image.
-    UIImageView *myView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Me.jpg"]];
+    UIImageView *myView = [[UIImageView alloc] init];
     
     // Set the frame, which descibes the view's location and size
     // in its superview's coordinate system.
     myView.frame = CGRectMake(30, 30, 100, 100);
+    
+    // Get the image from the Internet
+    [myView setImageWithURL:[NSURL URLWithString:@"http://s.gravatar.com/avatar/a2bc40cb59c487b5415d558965ea3fee?s=200"]
+           placeholderImage:[UIImage imageNamed:@"Placeholder.png"]];
     
     // Add the picture as a subview.
     [self.scrollView addSubview:myView];
