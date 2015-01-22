@@ -15,6 +15,7 @@
 		AF315A711A6EFA0B00DA2E1F /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AF315A671A6EFA0B00DA2E1F /* UIProgressView+AFNetworking.m */; };
 		AF315A721A6EFA0B00DA2E1F /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AF315A691A6EFA0B00DA2E1F /* UIRefreshControl+AFNetworking.m */; };
 		AF315A731A6EFA0B00DA2E1F /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AF315A6B1A6EFA0B00DA2E1F /* UIWebView+AFNetworking.m */; };
+		AF315A751A701E1B00DA2E1F /* MyProfile.json in Resources */ = {isa = PBXBuildFile; fileRef = AF315A741A701E1B00DA2E1F /* MyProfile.json */; };
 		AF58A4A31A53988800ED79E6 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58A4A21A53988800ED79E6 /* FeedViewController.m */; };
 		AF58A4A61A539D3200ED79E6 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58A4A51A539D3200ED79E6 /* FavoritesViewController.m */; };
 		AF58A4A91A53A03200ED79E6 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58A4A81A53A03200ED79E6 /* ProfileViewController.m */; };
@@ -66,6 +67,7 @@
 		AF315A691A6EFA0B00DA2E1F /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		AF315A6A1A6EFA0B00DA2E1F /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		AF315A6B1A6EFA0B00DA2E1F /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		AF315A741A701E1B00DA2E1F /* MyProfile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MyProfile.json; sourceTree = "<group>"; };
 		AF58A4A11A53988800ED79E6 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		AF58A4A21A53988800ED79E6 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		AF58A4A41A539D3200ED79E6 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				AF61330A1A5309BA0081CABC /* Main.storyboard */,
 				AF61330D1A5309BA0081CABC /* Images.xcassets */,
 				AF61330F1A5309BA0081CABC /* LaunchScreen.xib */,
+				AF315A741A701E1B00DA2E1F /* MyProfile.json */,
 				AFEFA1CE1A6D8A080012785B /* AFNetworking */,
 				AF315A5A1A6EFA0B00DA2E1F /* UIKit+AFNetworking */,
 				AF6133001A5309BA0081CABC /* Supporting Files */,
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF61330C1A5309BA0081CABC /* Main.storyboard in Resources */,
+				AF315A751A701E1B00DA2E1F /* MyProfile.json in Resources */,
 				AF6133111A5309BA0081CABC /* LaunchScreen.xib in Resources */,
 				AF61330E1A5309BA0081CABC /* Images.xcassets in Resources */,
 			);
